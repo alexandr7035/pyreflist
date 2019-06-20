@@ -32,7 +32,7 @@ body {
 }
 /* -------------------- */
 
-
+/* Link selector settings */
 #main-div {
 
     background: white;
@@ -42,4 +42,15 @@ body {
     min-height: 700px;
 
     padding: 30px;
+}
+
+#form-div select{
+    width: 1024px;
+    height: 40px;
+    font-size: 1em
+
+}
+
+#form-div option{
+    font-size: 1em;
 }
