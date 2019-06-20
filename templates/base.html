@@ -4,7 +4,15 @@
 	<title>LitLinks</title>
 	 <link rel= "stylesheet" href='static/css/style.css'>
 </head>
+
 <body>
-{% block content %}{% endblock %}
+	   <ul id='header-ul'>
+            <li><a href='index.html'>Главная страница</a></li>
+            <li><a href='info.html'>Информация</a></li>
+       </ul>
+       
+	   <div id='main-div'>
+			{% block content %}{% endblock %}
+	   </div>
 </body>
 </html>
