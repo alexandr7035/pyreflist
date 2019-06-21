@@ -44,13 +44,14 @@ body {
     padding: 30px;
 }
 
-#form-div select{
+#selector-div select{
     width: 1024px;
     height: 40px;
     font-size: 1em
 
 }
 
-#form-div option{
+#selector-div option{
     font-size: 1em;
 }
+/* -------------------- */

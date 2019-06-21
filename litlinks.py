@@ -11,5 +11,10 @@ def index():
 def info():
     return render_template('info.html')
 
+@app.route('/form')
+def form():
+    return render_template('form.html')
+
+
 if __name__ == '__main__':
     app.run()
