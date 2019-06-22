@@ -1,5 +1,7 @@
 from flask import Flask
 from flask import render_template
+from flask import request
+from flask import json
 app = Flask(__name__)
 
 @app.route('/')
@@ -11,8 +13,12 @@ def index():
 def info():
     return render_template('info.html')
 
-@app.route('/form')
+@app.route('/form', methods=['POST', 'GET'])
 def form():
+    if request.method == 'POST':
+        data = json.loads(request.data.decode('utf-8'))
+        print(data['selected_link'])
+    
     return render_template('form.html')
 
 
