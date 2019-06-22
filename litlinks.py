@@ -13,14 +13,16 @@ def index():
 def info():
     return render_template('info.html')
 
-@app.route('/link_form_selector', methods=['POST', 'GET'])
+@app.route('/link_form_selector', methods=['POST','GET'])
 def link_form_selector():
+
     if request.method == 'POST':
         data = json.loads(request.data.decode('utf-8'))
-        print(data['selected_link'])
-    
-    return render_template('form.html')
+        selected_source = data['selected_source']
+        print(selected_source)
 
+
+    return(json.dumps(render_template('forms/' + selected_source + '.html')))
 
 if __name__ == '__main__':
     app.run()
