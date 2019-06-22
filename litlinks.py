@@ -13,8 +13,8 @@ def index():
 def info():
     return render_template('info.html')
 
-@app.route('/form', methods=['POST', 'GET'])
-def form():
+@app.route('/link_form_selector', methods=['POST', 'GET'])
+def link_form_selector():
     if request.method == 'POST':
         data = json.loads(request.data.decode('utf-8'))
         print(data['selected_link'])
