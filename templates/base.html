@@ -5,11 +5,18 @@
 </head>
 
 <body>
-       <ul id='header-ul'>
-            <li><a href='/index'>Главная страница</a></li>
-            <li><a href='/info'>Информация</a></li>
-       </ul>
-       
+
+    <div id="header-div">
+        <div id="centralize">
+            <table>
+                <tr>
+                    <td><a href='/index'>Главная страница</a></td>
+                    <td><a href='/info'>Информация</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
        <div id='main-div'>
             {% block content %}{% endblock %}
        </div>

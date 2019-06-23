@@ -4,35 +4,37 @@ body {
     font-size: 150%
 }
 
-/* header settings */
-#header-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333333;
-  background-color: #337227;
-  font-size: large;
+
+#header-div {
+    width: 100%;
+    background-color: #337227;
+    text-align: center
 }
 
-#header-ul li {
-  float: left;
+#centralize {
+    /* background: red; */
+    margin: 0 auto;
+    max-width: 1084px;
 }
 
-#header-ul li a {
-  display: block;
-  color: white;
-  text-align: center;
-  /* header width depends on */
-  padding: 15px;
-  text-decoration: none;
+#header-div table {
+    height: 50px;
+
 }
 
-#header-ul li a:hover {
-  background-color: #111111;
+#header-div a {
+      text-decoration: none;
+      color: white;
+      font-size: large;
+      padding: 15px;
+      padding: 15px;
+}
+
+#header-div a:hover {
   background-color: #2A6020;
 }
-/* -------------------- */
+
+
 
 /* Link selector settings */
 #main-div {
