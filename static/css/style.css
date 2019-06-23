@@ -46,7 +46,7 @@ body {
 
 #selector-div select{
     width: 1024px;
-    height: 40px;
+    height: 1.5em;
     font-size: 1em
 
 }
