@@ -11,6 +11,7 @@ body {
   padding: 0;
   overflow: hidden;
   background-color: #333333;
+  background-color: #337227;
   font-size: large;
 }
 
@@ -29,6 +30,7 @@ body {
 
 #header-ul li a:hover {
   background-color: #111111;
+  background-color: #2A6020;
 }
 /* -------------------- */
 
@@ -56,6 +58,3 @@ body {
 }
 /* -------------------- */
 
-#form-div p {
-    color: red;
-}
