@@ -22,14 +22,53 @@ selector_clicked_func = function(){
 
 
 
+};
+
+submit_form_func = function(e){
+            console.log('SUBMIT pressed');
+
+            // get form id
+            current_form = $("#submit-btn").parents('form:first').attr('id');
+
+            $("#journal-article-form").find(":input").filter(function () {
+            return $.trim(this.value).length > 0
+            });
+
+            // Create array of form inputs
+            var form_data = $("#journal-article-form").find(":input").filter(function () {
+            return $.trim(this.value).length > 0
+            }).serializeArray();
+
+            // array ---> json
+            var data_json = {};
+            $(form_data).each(function(index, obj){
+            data_json[obj.name] = obj.value;
+            });
+
+            // add form id to json
+            data_json["form_name"] = current_form;
+
+            console.log(data_json)
+
+            // send data to backend
+            $.ajax({
+                type: "POST",
+                url: "/form_handler",
+                data: JSON.stringify(data_json),
+                dataType: "json",
+                contentType: 'application/json;charset=UTF-8'
+            })
+
 }
 
 // Main function
 main = function(){
         // Selector handler
-        $("#ll-selector").click(selector_clicked_func)
-
+        $("#ll-selector").click(selector_clicked_func);
+        $("#submit-btn").click(submit_form_func);
 
 }
 
 $(document).ready(main)
+
+
