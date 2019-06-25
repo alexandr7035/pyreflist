@@ -1,43 +1,34 @@
-
-<style>
-
-
-
-
-
-
-</style>
-
+<script src="../static/js/set-litlink-form.js"></script>
 <h1 id="form-header">Статья из журнала</h1>
 
-<form>
+<form name='journal-article-form' id='journal-article-form'>
     <table id="form-table">
 
     <tr>
-        <td  class='name'>Название статьи</td> <td><input></td>
+        <td  class='name'>Название статьи</td> <td><input name="article_name"></td>
     </tr>
 
     <tr>
-        <td  class='name'>Автор</td> <td><input class="surname"><input class="initials"><input class="initials"></td> <!--<td id="fst">  <input></td> <td><input></td> -->
+        <td  class='name'>Автор</td> <td><input class="surname" name="author_surname"><input class="initials" name="author_initial1"><input class="initials" name="author_initial2"></td> <!--<td id="fst">  <input></td> <td><input></td> -->
     </tr>
 
     <tr>
-        <td class='name'>Название журнала</td> <td><input></td>
+        <td class='name'>Название журнала</td> <td><input name="journal_name"></td>
     </tr>
 
     <tr>
-        <td  class='name'>Номер журнала</td> <td><input class="number"></td>
+        <td  class='name'>Номер журнала</td> <td><input class="number" name="journal_number"></td>
     </tr>
 
     <tr>
-        <td  class='name's>Год издания</td> <td><input class="number"></td>
+        <td  class='name's>Год издания</td> <td><input class="number" name="publishing_name"></td>
     </tr>
 
     </table>
 
-    <div id='submit'><button type='button'>Подтвердить</button></div>
+    <div id='submit'><button id="submit-btn" type='button' name="submit_btn">Подтвердить</button></div>
 
-    <div id='output'><textarea cols="5"></textarea></div>
+    <div id='output'><textarea cols="5" name="output_area"></textarea></div>
     <!-- <div id='copy'><button type='button'>Копировать</button></div> -->
 
 </form>
