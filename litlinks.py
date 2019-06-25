@@ -18,11 +18,18 @@ def link_form_selector():
 
     if request.method == 'POST':
         data = json.loads(request.data.decode('utf-8'))
+        print(data)
         selected_source = data['selected_source']
         print(selected_source)
 
-
     return(json.dumps(render_template('forms/' + selected_source + '.html')))
+
+
+@app.route('/form_handler', methods=['POST'])
+def form_handler():
+    data = json.loads(request.data.decode('utf-8'))
+    print(data)
+    return ''
 
 if __name__ == '__main__':
     app.run()
