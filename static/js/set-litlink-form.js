@@ -18,21 +18,37 @@ selector_clicked_func = function(){
                     $("#form-div").append(response);
                 }});
 
-
-
-
-
 };
 
+
+
 submit_form_func = function(e){
+
             console.log('SUBMIT pressed');
 
             // get form id
             current_form = $("#submit-btn").parents('form:first').attr('id');
 
-            $("#journal-article-form").find(":input").filter(function () {
-            return $.trim(this.value).length > 0
+            // check if all inputs are not empty
+            any_empty = false;
+            $('input').each(function() {
+            if(!$(this).val()){
+                    // set red color to any empty input
+                    $(this).css('border-color', 'red');
+                    any_empty = true;
+                }
+            else {
+                // set default color if input is not empty
+                $(this).css('border-color', 'black');
+            }
             });
+
+            // don't submit form if any imput is empty
+            if (any_empty == true){
+                // exit this function
+                return
+            };
+
 
             // Create array of form inputs
             var form_data = $("#journal-article-form").find(":input").filter(function () {
@@ -60,6 +76,8 @@ submit_form_func = function(e){
             })
 
 }
+
+
 
 // Main function
 main = function(){
