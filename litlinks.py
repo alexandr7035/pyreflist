@@ -4,6 +4,8 @@ from flask import request
 from flask import json
 app = Flask(__name__)
 
+import form_func
+
 @app.route('/')
 @app.route('/index')
 def index():
@@ -24,11 +26,19 @@ def link_form_selector():
 
     return(json.dumps(render_template('forms/' + selected_source + '.html')))
 
+# call function form form_func.py to hadle the request
+def call_form_func(frontend_request):
+    func_to_call = getattr(form_func, frontend_request['form_name'])
+    func_to_call(frontend_request)
 
 @app.route('/form_handler', methods=['POST'])
 def form_handler():
+    print(request.data)
     data = json.loads(request.data.decode('utf-8'))
-    print(data)
+    print('>>> REQUEST: ', data, '\n')
+
+    reply = call_form_func(data)
+
     return ''
 
 if __name__ == '__main__':
