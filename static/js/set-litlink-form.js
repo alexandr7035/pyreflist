@@ -28,8 +28,8 @@ submit_form_func = function(e){
 
             // get form id
             current_form = $("#submit-btn").parents('form:first').attr('id');
-			console.log(current_form)
-			
+            console.log(current_form)
+
             // check if all inputs are not empty
             any_empty = false;
             $('input').each(function() {
@@ -46,6 +46,8 @@ submit_form_func = function(e){
 
             // don't submit form if any imput is empty
             if (any_empty == true){
+                // clear the output area
+                $("#output_area").empty();
                 // exit this function
                 return
             };
@@ -73,7 +75,16 @@ submit_form_func = function(e){
                 url: "/form_handler",
                 data: JSON.stringify(data_json),
                 dataType: "json",
-                contentType: 'application/json;charset=UTF-8'
+                contentType: 'application/json;charset=UTF-8',
+
+                success: function(response) {
+
+                    $("#output_area").empty();
+                    $("#output_area").append(response);
+                }
+
+
+
             })
 
 }

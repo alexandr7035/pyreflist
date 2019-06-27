@@ -26,10 +26,6 @@ def link_form_selector():
 
     return(json.dumps(render_template('forms/' + selected_source + '.html')))
 
-# call function form form_func.py to hadle the request
-def call_form_func(frontend_request):
-    func_to_call = getattr(form_func, frontend_request['form_name'])
-    func_to_call(frontend_request)
 
 @app.route('/form_handler', methods=['POST'])
 def form_handler():
@@ -37,9 +33,13 @@ def form_handler():
     data = json.loads(request.data.decode('utf-8'))
     print('>>> REQUEST: ', data, '\n')
 
-    reply = call_form_func(data)
+    # Decide which func to call depending on the 'form_name'
+    func_to_call = getattr(form_func, data['form_name'])
 
-    return ''
+    reply = func_to_call(data)
+    print(reply)
+
+    return(json.dumps(reply))
 
 if __name__ == '__main__':
     app.run()
