@@ -28,7 +28,8 @@ submit_form_func = function(e){
 
             // get form id
             current_form = $("#submit-btn").parents('form:first').attr('id');
-
+			console.log(current_form)
+			
             // check if all inputs are not empty
             any_empty = false;
             $('input').each(function() {
@@ -51,7 +52,7 @@ submit_form_func = function(e){
 
 
             // Create array of form inputs
-            var form_data = $("#journal-article-form").find(":input").filter(function () {
+            var form_data = $("#" + current_form).find(":input").filter(function () {
             return $.trim(this.value).length > 0
             }).serializeArray();
 
