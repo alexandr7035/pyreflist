@@ -118,14 +118,20 @@ body {
         margin: 0 0.5% 0 0;
     }
 
-/* div for submit button */
-#submit {
+/* div for buttons */
+#button-area {
         text-align: center;
         margin-top: 3%;
         width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+
+
+
 /* submit button */
-#submit button {
+#submit-btn {
         background-color: #337227;
         color: white;
         width: 60%;
@@ -134,7 +140,40 @@ body {
         border-radius: 10px;
     }
 
-/* output text fireld */
+#copy-btn {
+        background-color:  #337227;
+        color: white;
+        width: 2em;
+        font-size: 1em;
+        height: 2em;
+        border-radius: 10px;
+        padding: 1%;
+ }
+
+#clear-btn {
+        background-color:  #337227;
+        color: white;
+        width: 2em;
+        font-size: 1em;
+        height: 2em;
+        border-radius: 10px;
+        padding: 1%;
+
+ }
+
+#clear-btn img {
+    vertical-align:middle;
+    width: 100%;
+    height: 100%;
+}
+
+#copy-btn img {
+    vertical-align:middle;
+    width: 100%;
+    height: 100%;
+}
+
+ /* output text fireld */
 #output {
         margin-top: 3%;
         text-align: center
@@ -147,19 +186,3 @@ body {
         font-size: 1em;
 
 }
-
-/* copy button */
-#copy {
-        text-align: center;
-        margin-top: 3%;
-        width: 100%;
-}
-
-#copy button {
-        background-color: #337227;
-        color: white;
-        width: 60%;
-        font-size: 1em;
-        height: 2em;
-        border-radius: 10px;
- }

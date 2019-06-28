@@ -89,6 +89,26 @@ submit_form_func = function(e){
 
 }
 
+// clear button
+clear_textaria_func = function() {
+    // clear output area
+    $('#output_area').val('');
+    $('input').each(function() {
+        // clear input
+        $(this).val('');
+        // set black color
+        $(this).css('border-color', 'black');
+    });
+
+    console.log('clear');
+
+}
+
+// copy button
+copy_button_func = function() {
+    $("#output_area").select();
+    document.execCommand('copy');
+}
 
 
 // Main function
@@ -96,7 +116,8 @@ main = function(){
         // Selector handler
         $("#ll-selector").click(selector_clicked_func);
         $("#submit-btn").click(submit_form_func);
-
+        $("#clear-btn").click(clear_textaria_func);
+        $('#copy-btn').click(copy_button_func);
 }
 
 $(document).ready(main)
