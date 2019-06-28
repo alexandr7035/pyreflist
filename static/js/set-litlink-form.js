@@ -34,6 +34,12 @@ submit_form_func = function(e){
             any_empty = false;
             $('input').each(function() {
             if(!$(this).val()){
+
+                    // skip inputs which are allowed to be empty
+                    if ($(this).hasClass('allow_empty')) {
+                        return true;
+                    }
+
                     // set red color to any empty input
                     $(this).css('border-color', 'red');
                     any_empty = true;
