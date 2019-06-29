@@ -131,7 +131,7 @@ body {
 
 
 /* submit button */
-#submit-btn {
+#submit_btn {
         background-color: #337227;
         color: white;
         width: 60%;
@@ -140,7 +140,7 @@ body {
         border-radius: 10px;
     }
 
-#copy-btn {
+#copy_btn {
         background-color:  #337227;
         color: white;
         width: 2em;
@@ -150,7 +150,7 @@ body {
         padding: 1%;
  }
 
-#clear-btn {
+#clear_btn {
         background-color:  #337227;
         color: white;
         width: 2em;
@@ -161,13 +161,13 @@ body {
 
  }
 
-#clear-btn img {
+#clear_btn img {
     vertical-align:middle;
     width: 100%;
     height: 100%;
 }
 
-#copy-btn img {
+#copy_btn img {
     vertical-align:middle;
     width: 100%;
     height: 100%;

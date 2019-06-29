@@ -27,7 +27,7 @@ submit_form_func = function(e){
             console.log('SUBMIT pressed');
 
             // get form id
-            current_form = $("#submit-btn").parents('form:first').attr('id');
+            current_form = $("#submit_btn").parents('form:first').attr('id');
             console.log(current_form)
 
             // check if all inputs are not empty
@@ -121,9 +121,9 @@ copy_button_func = function() {
 main = function(){
         // Selector handler
         $("#ll-selector").click(selector_clicked_func);
-        $("#submit-btn").click(submit_form_func);
-        $("#clear-btn").click(clear_textaria_func);
-        $('#copy-btn').click(copy_button_func);
+        $("#submit_btn").click(submit_form_func);
+        $("#clear_btn").click(clear_textaria_func);
+        $('#copy_btn').click(copy_button_func);
 }
 
 $(document).ready(main)
