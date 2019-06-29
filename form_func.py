@@ -28,3 +28,17 @@ def journal_article_form(request):
         reference_string += ' – C. ' + first_page + '–' + last_page + '.'
 
     return(reference_string)
+
+def book_1_author_form(request):
+    print('BOOK_1_AUTHOR - ' + str(request))
+
+    r = request
+
+    reference_string = r['author_surname'] + ', ' + r['author_initial1'] + '.' + r['author_initial2'] + '. '
+    reference_string += r['book_name'] + ' / '
+    reference_string += r['author_initial1'] + '.' + r['author_initial2'] + '. ' + r['author_surname'] + '.'
+    reference_string += ' – ' + r['edition_number'] + '-е изд. – ' + r['publishing_locality'] + ': '
+    reference_string += r['publishing_house'] + ', ' + r['publishing_year'] + '. – ' + r['pages_count'] + ' с.'
+
+    return(reference_string)
+
