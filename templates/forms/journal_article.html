@@ -1,4 +1,7 @@
-<script src="../static/js/set-litlink-form.js"></script>
+{% extends "forms/common.html" %}
+
+{% block form_block %}
+
 <h1 id="form-header">Статья из журнала</h1>
 
 <form name='journal_article_form' id='journal_article_form'>
@@ -30,13 +33,4 @@
 
     </table>
 
-    <div id='button-area'>
-        <button id='clear-btn' type='button'> <img src="static/images/clear.png"> </button>
-        <button id="submit-btn" type='button' name="submit_btn">Подтвердить</button>
-        <button id='copy-btn' type='button'><img src="static/images/copy.png"> </</button>
-    </div>
-
-    <div id='output'><textarea cols="5" id="output_area" name="output_area"></textarea></div>
-    <!-- <div id='copy'><button type='button'>Копировать</button></div> -->
-
-</form>
+{% endblock %}
