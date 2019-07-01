@@ -79,16 +79,20 @@ body {
         border: 1px red;
         table-layout: fixed;
         margin: 0;
+
+        min-width: 100%;
     }
 
 #form-table td {
         /* border: 1px solid black; */
         font-weight: bold;
+
     }
 
 #form-table td.name {
         /* border: 1px solid red; */
-        white-space: nowrap
+        white-space: nowrap;
+        width: 1%;
     }
 
 #form-table input {
@@ -189,8 +193,8 @@ body {
 
 /* warning picture with tool tip */
 #warning_img {
-	width: 1em;
-	height: 1em;
-	vertical-align: middle;
-	padding-bottom: 3px;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    padding-bottom: 3px;
 }
