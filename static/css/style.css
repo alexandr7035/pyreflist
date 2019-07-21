@@ -8,7 +8,8 @@ body {
 #header-div {
     width: 100%;
     background-color: #337227;
-    text-align: center
+    text-align: center;
+    border-bottom: 1px solid black;
 }
 
 #centralize {
@@ -19,7 +20,6 @@ body {
 
 #header-div table {
     height: 50px;
-
 }
 
 #header-div a {
