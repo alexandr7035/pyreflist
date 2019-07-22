@@ -198,3 +198,30 @@ body {
     vertical-align: middle;
     padding-bottom: 3px;
 }
+
+.warning-b {
+    color: red;
+}
+
+#examples_table {
+   font-size: 0.9em;
+   min-width: 1000;
+   margin-top: 30px;
+   border-collapse: collapse;
+}
+
+#examples_table th {
+    color: white;
+    border: 1px solid  black;
+    background: #337227;
+    padding: 10px;
+}
+
+#examples_table td {
+    border: 1px solid  black;
+    padding: 10px;
+}
+
+#example_table tr.short, td.short {
+    white-space: nowrap;
+}
