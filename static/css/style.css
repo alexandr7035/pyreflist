@@ -225,3 +225,13 @@ body {
 #example_table tr.short, td.short {
     white-space: nowrap;
 }
+
+#footer-div {
+	background: white;
+    max-width: 1024px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: auto;
+}
