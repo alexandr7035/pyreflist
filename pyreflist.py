@@ -2,12 +2,20 @@ from flask import Flask
 from flask import render_template
 from flask import request
 from flask import json
-app = Flask(__name__)
 
 import form_func
 
+
+class App():
+    def __init__(self):
+        self.name = 'PYRefList'
+        self.version = '2019-1'
+
+app = App()
+flask_app = Flask(__name__)
+
 # used to prevent chaching images and css
-@app.after_request
+@flask_app.after_request
 def add_header(r):
     """
     Add headers to both force latest IE rendering engine or Chrome Frame,
@@ -20,16 +28,16 @@ def add_header(r):
     return r
 
 
-@app.route('/')
-@app.route('/index')
+@flask_app.route('/')
+@flask_app.route('/index')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', projectname=app.name, version=app.version)
 
-@app.route('/info')
+@flask_app.route('/info')
 def info():
-    return render_template('info.html')
+    return render_template('info.html', projectname=app.name, version=app.version)
 
-@app.route('/link_form_selector', methods=['POST','GET'])
+@flask_app.route('/link_form_selector', methods=['POST','GET'])
 def link_form_selector():
 
     if request.method == 'POST':
@@ -41,7 +49,7 @@ def link_form_selector():
     return(json.dumps(render_template('forms/' + selected_source + '.html')))
 
 
-@app.route('/form_handler', methods=['POST'])
+@flask_app.route('/form_handler', methods=['POST'])
 def form_handler():
     print(request.data)
     data = json.loads(request.data.decode('utf-8'))
@@ -56,4 +64,4 @@ def form_handler():
     return(json.dumps(reply))
 
 if __name__ == '__main__':
-    app.run()
+    flask_app.run()
