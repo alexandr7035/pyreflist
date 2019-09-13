@@ -1,5 +1,5 @@
 
-selector_clicked_func = function(){
+form_selector_clicked_func = function(){
             // Get id of the selected item
             var choice = $(this).children("option:selected").attr("id");
 
@@ -120,7 +120,7 @@ copy_button_func = function() {
 // Main function
 main = function(){
         // Selector handler
-        $("#ll-selector").click(selector_clicked_func);
+        $("#form-selector").click(form_selector_clicked_func);
         $("#submit_btn").click(submit_form_func);
         $("#clear_btn").click(clear_textaria_func);
         $('#copy_btn').click(copy_button_func);
