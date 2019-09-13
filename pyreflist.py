@@ -37,8 +37,8 @@ def index():
 def info():
     return render_template('info.html', projectname=app.name, version=app.version)
 
-@flask_app.route('/link_form_selector', methods=['POST','GET'])
-def link_form_selector():
+@flask_app.route('/form_selector', methods=['POST','GET'])
+def form_selector():
 
     if request.method == 'POST':
         data = json.loads(request.data.decode('utf-8'))

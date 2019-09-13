@@ -7,7 +7,7 @@ selector_clicked_func = function(){
 
             // send POST request with option id to flask and receive necessary div
             $.ajax({
-                url:"/link_form_selector",
+                url:"/form_selector",
                 type: 'POST',
                 data: JSON.stringify({'selected_source': choice}),
                 dataType: "json",
