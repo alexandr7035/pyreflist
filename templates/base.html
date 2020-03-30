@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>PYRefList</title>
+     <link rel= "stylesheet" href='static/css/style.css'>
+</head>
+
+<body>
+
+    <div id="header-div">
+        <div id="centralize">
+            <table>
+                <tr>
+                    <td><a href='/index'>Главная страница</a></td>
+                    <td><a href='/info'>Информация</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+       <div id='main-div'>
+            {% block content %}{% endblock %}
+       </div>
+       
+       <div id='footer-div'>
+       <b>{{ projectname }}</b> v{{ version }}.
+       </div>
+       
+</body>
+</html>

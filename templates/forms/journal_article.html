@@ -1,0 +1,36 @@
+{% extends "forms/common.html" %}
+
+{% block form_block %}
+
+<h1 id="form-header">Статья из журнала</h1>
+
+<form name='journal_article_form' id='journal_article_form'>
+    <table id="form-table">
+
+    <tr>
+        <td  class='name'>Название статьи</td> <td><input name="article_name"></td>
+    </tr>
+
+    <tr>
+        <td  class='name'>Автор</td> <td><input class="surname" name="author_surname"><input class="initials" name="author_initial1"><input class="initials" name="author_initial2"></td> <!--<td id="fst">  <input></td> <td><input></td> -->
+    </tr>
+
+    <tr>
+        <td class='name'>Название журнала</td> <td><input name="journal_name"></td>
+    </tr>
+
+    <tr>
+        <td  class='name'>Номер журнала</td> <td><input class="number" name="journal_number"></td>
+    </tr>
+
+    <tr>
+        <td  class='name's>Год издания</td> <td><input class="number" name="publishing_year"></td>
+    </tr>
+
+    <tr>
+        <td class='name'>Страница(ы)</td> <td><input class="number allow_empty" name="first_page"> – <input class="number allow_empty" name="last_page"> <img id='warning_img' src="static/images/warning.png" title='Если необходимо сослаться на одну страницу, заполните только одно поле.'></td>
+    </tr>
+
+    </table>
+
+{% endblock %}

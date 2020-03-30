@@ -1,0 +1,40 @@
+{% extends "forms/common.html" %}
+
+{% block form_block %}
+
+<h1 id="form-header">Книга, 1 автор</h1>
+
+<form name='book_1_author_form' id='book_1_author_form'>
+    <table id="form-table">
+        <tr>
+            <td  class='name'>Название учебника</td> <td><input name="book_name"></td>
+        </tr>
+
+        <tr>
+            <td  class='name'>Автор</td> <td><input class="surname" name="author_surname"><input class="initials" name="author_initial1"><input class="initials" name="author_initial2"></td>
+        </tr>
+
+        <tr>
+            <td  class='name'>Издательство</td> <td><input name="publishing_house"></td>
+        </tr>
+
+         <tr>
+            <td  class='name'>Номер издания</td> <td><input class="number" name="edition_number"></td>
+        </tr>
+
+        <tr>
+            <td  class='name'>Город</td> <td><input name="publishing_locality"></td>
+        <tr>
+
+        <tr>
+            <td  class='name'>Количество страниц</td> <td><input class="number" name="pages_count"></td>
+        </tr>
+
+
+        <tr>
+            <td  class='name'>Год издания</td> <td><input class="number" name="publishing_year"></td>
+        </tr>
+
+    </table>
+
+{% endblock %}
