@@ -9,7 +9,7 @@ import form_func
 class App():
     def __init__(self):
         self.name = 'PYRefList'
-        self.version = '0.1'
+        self.version = '0.2'
 
 app = App()
 flask_app = Flask(__name__)
